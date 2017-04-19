@@ -31,7 +31,13 @@ namespace OutlookExtentionPack
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
-        #endregion
-    }
+
+		#endregion
+
+		//アドイン起動時にリボンの読み込みを行う処理
+		protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
+		{
+			return new CustomRibbonLoader();
+		}
+	}
 }
