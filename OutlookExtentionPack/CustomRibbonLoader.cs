@@ -41,37 +41,37 @@ namespace OutlookExtentionPack
 
 		public void RibbonTest(Office.IRibbonControl control, bool pressed)
 		{
-			Test.Value1 = pressed;
-			ttt = DateTime.Now;
-			Console.WriteLine(control.Id);
+			//Test.Value1 = pressed;
+			//ttt = DateTime.Now;
+			//Console.WriteLine(control.Id);
 
-			this.ribbon.InvalidateControl("CheckBox_AddSelfToCC");
+			//this.ribbon.InvalidateControl("CheckBox_AddSelfToCC");
 
-			{
-				Microsoft.Office.Interop.Outlook.Application application = Globals.ThisAddIn.Application;
-				if (Test.Value1 == true)
-				{
-					application.ItemSend += OnItemSend;
-				}
-				else
-				{
-					application.ItemSend -= OnItemSend;
-				}
-			}
+			//{
+			//	Microsoft.Office.Interop.Outlook.Application application = Globals.ThisAddIn.Application;
+			//	if (Test.Value1 == true)
+			//	{
+			//		application.ItemSend += OnItemSend;
+			//	}
+			//	else
+			//	{
+			//		application.ItemSend -= OnItemSend;
+			//	}
+			//}
 		}
 
 		private void OnItemSend(object sendItem, ref bool cancel)
 		{
-			if (sendItem is Microsoft.Office.Interop.Outlook.MailItem && Test.Value1 == true)
-			{
-				var mailItem = sendItem as Microsoft.Office.Interop.Outlook.MailItem;
-			}
+			//if (sendItem is Microsoft.Office.Interop.Outlook.MailItem && Test.Value1 == true)
+			//{
+			//	var mailItem = sendItem as Microsoft.Office.Interop.Outlook.MailItem;
+			//}
 		}
 
-		public bool GetPressed(Office.IRibbonControl control)
-		{
-			return Test.Value1;
-		}
+		//public bool GetPressed(Office.IRibbonControl control)
+		//{
+		//	return Test.Value1;
+		//}
 
 		#endregion
 

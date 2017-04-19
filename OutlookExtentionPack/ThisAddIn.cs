@@ -32,12 +32,15 @@ namespace OutlookExtentionPack
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
 
-		#endregion
+        #endregion
 
-		//アドイン起動時にリボンの読み込みを行う処理
-		protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
-		{
-			return new CustomRibbonLoader();
-		}
-	}
+        //アドイン起動時にリボンの読み込みを行う処理
+        protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
+        {
+            return Globals.Factory.GetRibbonFactory().CreateRibbonManager(new Microsoft.Office.Tools.Ribbon.IRibbonExtension[] 
+            {
+                new MailComposeAddin()
+            });
+        }
+    }
 }
