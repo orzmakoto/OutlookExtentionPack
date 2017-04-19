@@ -10,7 +10,7 @@ namespace OutlookExtentionPack
     {
         private void MailComposeAddin_Load(object sender, RibbonUIEventArgs e)
         {
-
+            Console.WriteLine("123");
         }
     }
 }

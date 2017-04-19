@@ -46,9 +46,9 @@
             // tab1
             // 
             this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.ControlId.OfficeId = "tab1";
+            this.tab1.ControlId.OfficeId = "TabNewMailMessage";
             this.tab1.Groups.Add(this.group1);
-            this.tab1.Label = "tab1";
+            this.tab1.Label = "TabNewMailMessage";
             this.tab1.Name = "tab1";
             // 
             // group1
@@ -58,6 +58,7 @@
             this.group1.Items.Add(this.splitButton1);
             this.group1.Label = "group1";
             this.group1.Name = "group1";
+            this.group1.Position = this.Factory.RibbonPosition.AfterOfficeId("GroupClipboard");
             // 
             // button1
             // 
@@ -77,7 +78,7 @@
             // MailComposeAddin
             // 
             this.Name = "MailComposeAddin";
-            this.RibbonType = "Microsoft.Outlook.Mail.Compose, Microsoft.Outlook.Mail.Read";
+            this.RibbonType = "Microsoft.Outlook.Mail.Compose";
             this.Tabs.Add(this.tab1);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.MailComposeAddin_Load);
             this.tab1.ResumeLayout(false);
@@ -89,12 +90,11 @@
         }
 
         #endregion
-
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
         internal Microsoft.Office.Tools.Ribbon.RibbonCheckBox checkBox1;
         internal Microsoft.Office.Tools.Ribbon.RibbonSplitButton splitButton1;
+        private Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
     }
 
     partial class ThisRibbonCollection
