@@ -123,6 +123,9 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -172,10 +175,11 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="FileIo.cs" />
     <Compile Include="MailComposeAddin.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MailComposeAddin.Designer.cs">
+    <Compile Include="MailComposeAddin.designer.cs">
       <DependentUpon>MailComposeAddin.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -192,8 +196,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubWindow\MailComposeAddin\AttachedCompressSetting.resx">
+      <DependentUpon>AttachedCompressSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubWindow\MailComposeAddin\InputFileName.resx">
+      <DependentUpon>InputFileName.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="OutlookExtentionPack_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -202,7 +214,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="CustomRibbonLoader.cs" />
+    <Compile Include="SubWindow\MailComposeAddin\AttachedCompressSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubWindow\MailComposeAddin\AttachedCompressSetting.designer.cs">
+      <DependentUpon>AttachedCompressSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\MailComposeAddin\InputFileName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubWindow\MailComposeAddin\InputFileName.designer.cs">
+      <DependentUpon>InputFileName.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -213,6 +236,32 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1424162342_48761.ico" />
+    <Content Include="Resources\3floppy_mount.png" />
+    <Content Include="Resources\addAttached.png" />
+    <Content Include="Resources\addAttachedCompress.png" />
+    <Content Include="Resources\addAttachedName.png" />
+    <Content Include="Resources\ArrowDown.png" />
+    <Content Include="Resources\AttachedToCompress.png" />
+    <Content Include="Resources\Copy File.png" />
+    <Content Include="Resources\Cut.png" />
+    <Content Include="Resources\Database 3.png" />
+    <Content Include="Resources\DataType_Bitmap.png" />
+    <Content Include="Resources\DataType_None.png" />
+    <Content Include="Resources\DataType_Text.png" />
+    <Content Include="Resources\Download Database.png" />
+    <Content Include="Resources\Download.ico" />
+    <Content Include="Resources\Folder.png" />
+    <Content Include="Resources\Forward.png" />
+    <Content Include="Resources\MultiFile.png" />
+    <Content Include="Resources\Organize.ico" />
+    <Content Include="Resources\Organize.png" />
+    <Content Include="Resources\PanelSettings.png" />
+    <Content Include="Resources\Plus.png" />
+    <Content Include="Resources\Refresh.png" />
+    <Content Include="Resources\Setting.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
