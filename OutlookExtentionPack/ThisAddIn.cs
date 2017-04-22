@@ -39,7 +39,7 @@ namespace OutlookExtentionPack
         {
             return Globals.Factory.GetRibbonFactory().CreateRibbonManager(new Microsoft.Office.Tools.Ribbon.IRibbonExtension[] 
             {
-                new MailComposeAddin()
+                new MailComposeAddin(), new MailReadAddin()
             });
         }
     }

@@ -47,10 +47,12 @@ namespace OutlookExtentionPack
             this.bt_Attached2CompressSetting = this.Factory.CreateRibbonButton();
             this.bt_NewPassMail = this.Factory.CreateRibbonButton();
             this.tab2 = this.Factory.CreateRibbonTab();
-            this.splitButton3 = this.Factory.CreateRibbonSplitButton();
             this.group2 = this.Factory.CreateRibbonGroup();
             this.splitButton2 = this.Factory.CreateRibbonSplitButton();
             this.button1 = this.Factory.CreateRibbonButton();
+            this.splitButton4 = this.Factory.CreateRibbonSplitButton();
+            this.button2 = this.Factory.CreateRibbonButton();
+            this.splitButton3 = this.Factory.CreateRibbonSplitButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.group3.SuspendLayout();
@@ -79,14 +81,14 @@ namespace OutlookExtentionPack
             this.splitButton1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.splitButton1.Image = global::OutlookExtentionPack.Properties.Resources.addAttached;
             this.splitButton1.Items.Add(this.bt_Clip2Attached2);
-            this.splitButton1.Label = "追加    ";
+            this.splitButton1.Label = "添付    ";
             this.splitButton1.Name = "splitButton1";
             this.splitButton1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Clip2Attached_Click);
             // 
             // bt_Clip2Attached2
             // 
             this.bt_Clip2Attached2.Image = global::OutlookExtentionPack.Properties.Resources.Plus;
-            this.bt_Clip2Attached2.Label = "名前を付けて追加";
+            this.bt_Clip2Attached2.Label = "名前を付けて添付";
             this.bt_Clip2Attached2.Name = "bt_Clip2Attached2";
             this.bt_Clip2Attached2.ShowImage = true;
             this.bt_Clip2Attached2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.bt_Clip2Attached2_Click);
@@ -100,14 +102,14 @@ namespace OutlookExtentionPack
             this.bt_Clip2CompressAttached.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.bt_Clip2CompressAttached.Image = global::OutlookExtentionPack.Properties.Resources.addAttachedCompress;
             this.bt_Clip2CompressAttached.Items.Add(this.bt_Clip2CompressAttached2);
-            this.bt_Clip2CompressAttached.Label = "圧縮して追加";
+            this.bt_Clip2CompressAttached.Label = "圧縮して添付";
             this.bt_Clip2CompressAttached.Name = "bt_Clip2CompressAttached";
             this.bt_Clip2CompressAttached.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.bt_Clip2CompressAttached_Click);
             // 
             // bt_Clip2CompressAttached2
             // 
             this.bt_Clip2CompressAttached2.Image = global::OutlookExtentionPack.Properties.Resources.Plus;
-            this.bt_Clip2CompressAttached2.Label = "名前を付けて追加";
+            this.bt_Clip2CompressAttached2.Label = "名前を付けて添付";
             this.bt_Clip2CompressAttached2.Name = "bt_Clip2CompressAttached2";
             this.bt_Clip2CompressAttached2.ShowImage = true;
             this.bt_Clip2CompressAttached2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.bt_Clip2CompressAttached2_Click);
@@ -155,16 +157,11 @@ namespace OutlookExtentionPack
             this.tab2.Label = "TabNewMailMessage";
             this.tab2.Name = "tab2";
             // 
-            // splitButton3
-            // 
-            this.splitButton3.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.splitButton3.Label = "splitButton2";
-            this.splitButton3.Name = "splitButton3";
-            // 
             // group2
             // 
             this.group2.Items.Add(this.splitButton2);
-            this.group2.Label = "添付";
+            this.group2.Items.Add(this.splitButton4);
+            this.group2.Label = "クリップボード(拡張)";
             this.group2.Name = "group2";
             this.group2.Position = this.Factory.RibbonPosition.AfterOfficeId("GroupClipboard");
             // 
@@ -173,17 +170,39 @@ namespace OutlookExtentionPack
             this.splitButton2.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.splitButton2.Image = global::OutlookExtentionPack.Properties.Resources.addAttached;
             this.splitButton2.Items.Add(this.button1);
-            this.splitButton2.Label = "追加    ";
+            this.splitButton2.Label = "添付　";
             this.splitButton2.Name = "splitButton2";
             this.splitButton2.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Clip2Attached_Click);
             // 
             // button1
             // 
             this.button1.Image = global::OutlookExtentionPack.Properties.Resources.Plus;
-            this.button1.Label = "名前を付けて追加";
+            this.button1.Label = "名前を付けて添付";
             this.button1.Name = "button1";
             this.button1.ShowImage = true;
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.bt_Clip2Attached2_Click);
+            // 
+            // splitButton4
+            // 
+            this.splitButton4.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.splitButton4.Image = global::OutlookExtentionPack.Properties.Resources.addAttachedCompress;
+            this.splitButton4.Items.Add(this.button2);
+            this.splitButton4.Label = "圧縮して添付";
+            this.splitButton4.Name = "splitButton4";
+            this.splitButton4.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.bt_Clip2CompressAttached_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::OutlookExtentionPack.Properties.Resources.Plus;
+            this.button2.Label = "名前を付けて添付";
+            this.button2.Name = "button2";
+            this.button2.ShowImage = true;
+            // 
+            // splitButton3
+            // 
+            this.splitButton3.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.splitButton3.Label = "splitButton2";
+            this.splitButton3.Name = "splitButton3";
             // 
             // MailComposeAddin
             // 
@@ -224,6 +243,8 @@ namespace OutlookExtentionPack
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonSplitButton splitButton2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonSplitButton splitButton4;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton button2;
     }
 
     partial class ThisRibbonCollection
