@@ -182,11 +182,20 @@
     <Compile Include="MailComposeAddin.designer.cs">
       <DependentUpon>MailComposeAddin.cs</DependentUpon>
     </Compile>
+    <Compile Include="MailReadAddin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailReadAddin.Designer.cs">
+      <DependentUpon>MailReadAddin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="MailComposeAddin.resx">
       <DependentUpon>MailComposeAddin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailReadAddin.resx">
+      <DependentUpon>MailReadAddin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

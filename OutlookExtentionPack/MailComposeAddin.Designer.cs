@@ -47,10 +47,10 @@ namespace OutlookExtentionPack
             this.bt_Attached2CompressSetting = this.Factory.CreateRibbonButton();
             this.bt_NewPassMail = this.Factory.CreateRibbonButton();
             this.tab2 = this.Factory.CreateRibbonTab();
-            this.splitButton3 = this.Factory.CreateRibbonSplitButton();
             this.group2 = this.Factory.CreateRibbonGroup();
             this.splitButton2 = this.Factory.CreateRibbonSplitButton();
             this.button1 = this.Factory.CreateRibbonButton();
+            this.splitButton3 = this.Factory.CreateRibbonSplitButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.group3.SuspendLayout();
@@ -155,12 +155,6 @@ namespace OutlookExtentionPack
             this.tab2.Label = "TabNewMailMessage";
             this.tab2.Name = "tab2";
             // 
-            // splitButton3
-            // 
-            this.splitButton3.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.splitButton3.Label = "splitButton2";
-            this.splitButton3.Name = "splitButton3";
-            // 
             // group2
             // 
             this.group2.Items.Add(this.splitButton2);
@@ -184,6 +178,12 @@ namespace OutlookExtentionPack
             this.button1.Name = "button1";
             this.button1.ShowImage = true;
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.bt_Clip2Attached2_Click);
+            // 
+            // splitButton3
+            // 
+            this.splitButton3.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.splitButton3.Label = "splitButton2";
+            this.splitButton3.Name = "splitButton3";
             // 
             // MailComposeAddin
             // 
